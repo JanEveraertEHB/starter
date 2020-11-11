@@ -1,0 +1,34 @@
+version: "3.2"
+
+services:
+  api:
+    container_name: api
+    build: ./api
+    environment:
+      PG_CONNECTION_STRING: postgres://example:example@store:5432/test
+
+    ports:
+      - 3000:3000
+    volumes:
+      - ./api/src:/usr/app/api/src
+
+
+  front:
+    container_name: front
+    build: ./front
+    ports:
+      - 80:3000
+    volumes:
+      - ./front/src:/usr/app/front/src/
+
+  db:
+    container_name: store   
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
+      POSTGRES_USER: example
+      POSTGRES_DB: test
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - 5432:5432
