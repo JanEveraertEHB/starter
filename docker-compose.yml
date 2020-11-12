@@ -13,14 +13,6 @@ services:
       - ./api/src:/usr/app/api/src
 
 
-  front:
-    container_name: front
-    build: ./front
-    ports:
-      - 80:3000
-    volumes:
-      - ./front/src:/usr/app/front/src/
-
   db:
     container_name: store   
     image: postgres
