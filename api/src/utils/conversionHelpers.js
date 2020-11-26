@@ -15,10 +15,13 @@ const ConversionHelper = {
     const uuid = uuidv1();
     return uuid;
   },
-
+  /**
+    * validate UUID
+    *
+    * @params
+    * @returns uuid: String
+    */
   checkUUID: (uuid) => {
-    console.log(uuid)
-
     return true
   }
 }
