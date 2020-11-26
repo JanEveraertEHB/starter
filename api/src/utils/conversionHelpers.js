@@ -8,12 +8,18 @@ const ConversionHelper = {
   /**
    * generates UUID
    * 
-   * @params uuid: String 
+   * @params  
    * @returns uuid: String
    */
   generateUUID: () => {
     const uuid = uuidv1();
     return uuid;
+  },
+
+  checkUUID: (uuid) => {
+    console.log(uuid)
+
+    return true
   }
 }
 
