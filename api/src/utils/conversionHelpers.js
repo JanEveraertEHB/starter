@@ -4,7 +4,7 @@
 
 const { v1: uuidv1 } = require('uuid');
 
-const ConversionHelper = {
+const UUIDHelpers = {
   /**
    * generates UUID
    * 
@@ -17,4 +17,4 @@ const ConversionHelper = {
   }
 }
 
-module.exports = ConversionHelper
+module.exports = UUIDHelpers
